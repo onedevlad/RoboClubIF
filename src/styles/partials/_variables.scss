@@ -1,0 +1,55 @@
+
+
+$clr-white:		#FBFBFB;
+$clr-black:		#424049;
+$clr-gray:		#ECECEC;
+$clr-yellow:	#EBA352;
+$clr-red:		#D86761;
+$clr-blue:		#00A5B6;
+
+$inputs-list: 'input[type="email"]',
+              'input[type="number"]',
+              'input[type="password"]',
+              'input[type="search"]',
+              'input[type="tel"]',
+              'input[type="text"]',
+              'input[type="url"]',
+
+              // Webkit & Gecko may change the display of these in the future
+              'input[type="color"]',
+              'input[type="date"]',
+              'input[type="datetime"]',
+              'input[type="datetime-local"]',
+              'input[type="month"]',
+              'input[type="time"]',
+              'input[type="week"]';
+
+$unquoted-inputs-list: ();
+
+@each $input-type in $inputs-list {
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma) !global;
+}
+$all-text-inputs: $unquoted-inputs-list;
+
+
+$inputs-list-f:'input[type="email"]:focus',
+                'input[type="number"]:focus',
+                'input[type="password"]:focus',
+                'input[type="search"]:focus',
+                'input[type="tel"]:focus',
+                'input[type="text"]:focus',
+                'input[type="url"]:focus',
+                'input[type="color"]:focus',
+                'input[type="date"]:focus',
+                'input[type="datetime"]:focus',
+                'input[type="datetime-local"]:focus',
+                'input[type="month"]:focus',
+                'input[type="time"]:focus',
+                'input[type="week"]:focus';
+
+$unquoted-inputs-list-f: ();
+@each $input-type-f in $inputs-list-f {
+  $unquoted-inputs-list-f: append($unquoted-inputs-list-f, unquote($input-type-f), comma) !global;
+}
+
+$all-text-inputs-focus: $unquoted-inputs-list-f;

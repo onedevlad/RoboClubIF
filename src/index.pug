@@ -1,0 +1,137 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+
+doctype html
+html(lang='uk')
+  +head('RoboClub')
+  body
+    .wrapper
+      .preloader
+        .preloader__inner
+          .preloader__gear
+          .preloader__logo
+      +header('index')
+      .intro
+        .container
+          .intro__inner
+            h1.intro__title Lorem Ipsum is simply
+            p.intro__p Lorem Ipsum
+            button.basic-btn.red.intro__btn(type='button') Зареєструватись
+            button.intro__btn-video(type='button')
+              i.fa.fa-play-circle(aria-hidden='true')
+              |  Дивитись відео
+      main.content
+        section.section.mission-section
+          .container
+            h3.mission-section__title Місія
+            .mission-section__cols
+              .mission-section__col
+                p
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .mission-section__col
+                p
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .mission-section__col
+                .robo-img
+        section.section.quotes-section
+          .container
+            .quotes-slider
+              blockquote.quotes-slider__slide
+                p.quotes-slider__text
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                cite.quotes-slider__author John Doe
+                img.quotes-slider__photo(src='./images/faces_1.png', height='46', width='46', alt='', title='')
+              blockquote.quotes-slider__slide
+                p.quotes-slider__text
+                  | 2/Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                cite.quotes-slider__author John Doe
+                img.quotes-slider__photo(src='./images/faces_2.png', height='46', width='46', alt='', title='')
+              blockquote.quotes-slider__slide
+                p.quotes-slider__text
+                  | 3/Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                cite.quotes-slider__author John Doe
+                img.quotes-slider__photo(src='./images/faces_3.png', height='46', width='46', alt='', title='')
+              blockquote.quotes-slider__slide
+                p.quotes-slider__text
+                  | 4/Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                cite.quotes-slider__author John Doe
+                img.quotes-slider__photo(src='./images/faces_4.png', height='46', width='46', alt='', title='')
+              blockquote.quotes-slider__slide
+                p.quotes-slider__text
+                  | 5/Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                cite.quotes-slider__author John Doe
+                img.quotes-slider__photo(src='./images/faces_5.png', height='46', width='46', alt='', title='')
+        section.section
+          .container
+            h2.section__title Останні новини
+            ul.big-news.last
+              li.big-news__item
+                img.big-news__photo(src='./images/news_1.jpg', height='240', width='240')
+                .big-news__desc
+                  h3.big-news__title
+                    a(href='#') Lorem Ipsum is simply dummy text
+                  p.big-news__date 20 січня 2017
+                  a.big-news__link.basic-btn.yellow(href='#')
+                    i.fa.fa-link(aria-hidden='true')
+                    |  Дивитись
+              li.big-news__item.blue
+                img.big-news__photo(src='./images/news_2.jpg', height='240', width='240')
+                .big-news__desc
+                  h3.big-news__title
+                    a(href='#') Lorem Ipsum is simply dummy text
+                  p.big-news__date 20 січня 2017
+                  a.big-news__link.basic-btn.yellow(href='#')
+                    i.fa.fa-link(aria-hidden='true')
+                    |  Дивитись
+              li.big-news__item
+                img.big-news__photo(src='./images/news_3.jpg', height='240', width='240')
+                .big-news__desc
+                  h3.big-news__title
+                    a(href='#') Lorem Ipsum is simply dummy text
+                  p.big-news__date 20 січня 2017
+                  a.big-news__link.basic-btn.yellow(href='#')
+                    i.fa.fa-link(aria-hidden='true')
+                    |  Дивитись
+              li.big-news__item.blue
+                img.big-news__photo(src='./images/news_4.jpg', height='240', width='240')
+                .big-news__desc
+                  h3.big-news__title
+                    a(href='#') Lorem Ipsum is simply dummy text
+                  p.big-news__date 20 січня 2017
+                  a.big-news__link.basic-btn.yellow(href='#')
+                    i.fa.fa-link(aria-hidden='true')
+                    |  Дивитись
+            button.basic-btn.yellow.centered(type='button') Всі новини
+        section.section.ready.dark
+          .container
+            h2.section__title Готові розпочати?
+            h3.section__subtitle Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            button.basic-btn.yellow.centered(type='button') Зареєструватись
+        section.section.partners.container
+          h2.section__title Наші партнери
+          ul.partners-list
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_1.jpg', height='46', width='100')
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_2.jpg', height='46', width='100')
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_3.jpg', height='46', width='100')
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_4.jpg', height='46', width='100')
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_5.jpg', height='46', width='100')
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_6.jpg', height='46', width='100')
+            li.partners-list__item
+              a(href='#')
+                img(src='./images/icons/partners_7.jpg', height='46', width='100')
+        +contacts()
+      +footer()

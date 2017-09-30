@@ -1,0 +1,41 @@
+mixin header(activeLink)
+  header.row.header.inner
+    .col-sm-3.col-md-offset-1.col-xs-10
+      h1.logo.ir
+        a.logo__link(href='/') RoboClub IF
+    nav.col-sm-9.col-md-7.hidden-xs.main-nav
+      ul.main-menu
+        li.main-menu__item(class= activeLink === 'index' ? 'active' : '')
+          a.main-menu__link(href='#') Головна
+        li.main-menu__item.has-sub(class= activeLink === 'about' ? 'active' : '')
+          a.main-menu__link(href='#') Про нас
+          ul.sub-menu
+            li.sub-menu__item
+              a.sub-menu__link(href='#') RoboClub
+            li.sub-menu__item
+              a.sub-menu__link(href='#') CodeClub
+            li.sub-menu__item
+              a.sub-menu__link(href='#') Design Squad
+            li.sub-menu__item
+              a.sub-menu__link(href='#') Physics
+            li.sub-menu__item
+              a.sub-menu__link(href='#') Astronomy
+        li.main-menu__item(class= activeLink === 'courses' ? 'active' : '')
+          a.main-menu__link(href='#') Курси
+        li.main-menu__item(class= activeLink === 'news' ? 'active' : '')
+          a.main-menu__link(href='#') Новини
+        li.main-menu__item(class= activeLink === 'gallery' ? 'active' : '')
+          a.main-menu__link(href='#') Галерея
+        li.main-menu__item(class= activeLink === 'contacts' ? 'active' : '')
+          a.main-menu__link(href='#') Контакти
+      ul.main-socials
+        li.main-socials__item
+          a.main-socials__link(href='#')
+            i.fa.fa-facebook(aria-hidden='true')
+        li.main-socials__item
+          a.main-socials__link(href='#')
+            i.fa.fa-vk(aria-hidden='true')
+        li.main-socials__item
+          a.main-socials__link(href='#')
+            i.fa.fa-instagram(aria-hidden='true')
+    .fatnav.hidden-sm.hidden-md.hidden-lg *FATNAV HERE*

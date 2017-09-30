@@ -1,0 +1,130 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+
+doctype html
+html(lang='uk')
+  +head('RoboClub News')
+  body
+    .wrapper
+      +header('news')
+      main.content
+        h2.content-title Новини
+        .container
+          ul.big-news
+            li.big-news__item
+              img.big-news__photo(src='pic/news_1.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item.blue
+              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item
+              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item.blue
+              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item.blue
+              img.big-news__photo(src='pic/news_1.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item
+              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item.blue
+              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item
+              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item
+              img.big-news__photo(src='pic/news_1.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item.blue
+              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item
+              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+            li.big-news__item.blue
+              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
+              .big-news__desc
+                h3.big-news__title
+                  a(href='#') Lorem Ipsum is simply dummy text
+                p.big-news__date 20 січня 2017
+                a.big-news__link.basic-btn.yellow(href='#')
+                  i.fa.fa-link(aria-hidden='true')
+                  |  Дивитись
+          ul.pager-list
+            li.pager-list__item
+              .pager-list__link(disabled='') &#9668
+            li.pager-list__item
+              a.pager-list__link(href='#') &#9658
+        +contacts()
+      +footer()

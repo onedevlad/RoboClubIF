@@ -1,0 +1,53 @@
+mixin contacts()
+  section.section.contacts-section.dark
+    .container
+      .contacts-section__col
+        h3.section__title Контакти
+        .contacts-section__info
+          .contacts-section__info-item
+            i.fa.fa-map-marker(aria-hidden='true')
+            p
+              | м. Івано-Франківськ
+              br
+              |  вул. Південний бульвар, 22
+          .contacts-section__info-item
+            i.fa.fa-phone(aria-hidden='true')
+            p
+              a(href='tel:0995439522') 099 543 9522
+              br
+              a(href='tel:0985645211') 098 564 5211
+        h3.section__title Напишіть нам
+        form.basic-form
+          .basic-form__line
+            .basic-form__col
+              input.basic-input(type='text', name='', placeholder='Ім’я')
+            .basic-form__col
+              input.basic-input(type='email', name='', placeholder='E-mail')
+            .basic-form__col
+              input.basic-input(type='text', name='', placeholder='Телефон')
+          .basic-form__line
+            input.basic-input(type='text', name='', placeholder='Тема повідомлення')
+          .basic-form__line
+            textarea.basic-textarea(placeholder='Повідомлення')
+          .basic-form__btns
+            img(src='images/reCaptcha.png', height='46', width='184')
+            button.basic-form__submit.basic-btn.yellow(type='submit') Надіслати
+    .contacts-section__map-wrap
+      #map
+      script.
+        function initMap() {
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+            center: {lat: 48.9228421, lng: 24.7016536},
+            zoom: 17,
+            disableDefaultUI: true,
+            draggable: true
+          });
+          var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(48.9228708, 24.701702100000034),
+            map: map,
+            title: 'Робоклуб',
+            icon: './images/icons/marker.svg'
+          });
+        }
+      script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA-ZEocFpuybFyJZg92LhWsvIJdo56S34s&callback=initMap')

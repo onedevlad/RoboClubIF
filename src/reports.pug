@@ -1,0 +1,47 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+
+doctype html
+html(lang='uk')
+  +head('RoboClub Reports')
+  body
+    .wrapper
+      +header('about')
+      main.content
+        h2.content-title Фінансові звіти
+        .container
+          ul.reports-list
+            li.reports-list__item
+              a.reports-list__link(href='#')
+                p.reports-list__date 20 квітня 2017
+                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .reports-list__btn Дивитись
+            li.reports-list__item
+              a.reports-list__link(href='#')
+                p.reports-list__date 20 квітня 2017
+                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .reports-list__btn Дивитись
+            li.reports-list__item
+              a.reports-list__link(href='#')
+                p.reports-list__date 20 квітня 2017
+                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .reports-list__btn Дивитись
+            li.reports-list__item
+              a.reports-list__link(href='#')
+                p.reports-list__date 20 квітня 2017
+                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .reports-list__btn Дивитись
+            li.reports-list__item
+              a.reports-list__link(href='#')
+                p.reports-list__date 20 квітня 2017
+                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .reports-list__btn Дивитись
+            li.reports-list__item
+              a.reports-list__link(href='#')
+                p.reports-list__date 20 квітня 2017
+                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .reports-list__btn Дивитись
+        +contacts()
+      +footer()

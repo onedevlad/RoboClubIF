@@ -1,0 +1,21 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+
+doctype html
+html(lang='uk')
+  +head('RoboClub 404')
+  body
+    .container-fluid
+      +header('about')
+      main.content
+        section.row.section-404
+          .col-sm-12
+            h2.section-404__title 404
+            p.section-404__info Вибачте, такої сторінки не існує :(
+            a.section-404__back.basic-btn.red.large(href='/')
+              i.fa.fa-angle-left(aria-hidden='true')
+              |  Повернутися на головну
+        +contacts()
+      +footer()

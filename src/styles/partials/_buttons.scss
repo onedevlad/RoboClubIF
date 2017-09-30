@@ -1,0 +1,51 @@
+/* Buttons
+-----------------------------------------------------------------------------*/
+
+.basic-btn{
+	position: relative;
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	background: $clr-red;
+	padding: 8px 10px 6px;
+	border: 0;
+	cursor: pointer;
+	min-width: 160px;
+	border-radius: 3px;
+	transition: all .2s;
+	top: 0;
+
+	&.red{
+		background: #ec8b84;
+		color: #fff;
+		box-shadow: 0 3px 0 0 $clr-red;
+
+		&:hover{
+			box-shadow: 0 1px 0 0 $clr-red;
+			top: 2px;
+			color: #fff;
+		}
+	}
+
+	&.yellow{
+		background: $clr-yellow;
+		color: #fff;
+		box-shadow: 0 3px 0 0 #d38d46;
+
+		&:hover{
+			box-shadow: 0 1px 0 0 #d38d46;
+			top: 2px;
+			color: #fff;
+		}
+	}
+
+	&.centered{
+		margin: 0 auto;
+		display: table;
+	}
+
+	&.large {
+		font-size: 16px;
+		padding: 10px 12px 8px;
+	}
+}
