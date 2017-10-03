@@ -8,14 +8,14 @@ html(lang='uk')
   +head('RoboClub')
   body
     .wrapper
-      .preloader
-        .preloader__inner
-          .preloader__gear
-          .preloader__logo
+      //- .preloader
+      //-   .preloader__inner
+      //-     .preloader__gear
+      //-     .preloader__logo
       +header('index')
       .intro
         .container
-          .intro__inner
+          .col-md-6
             h1.intro__title Lorem Ipsum is simply
             p.intro__p Lorem Ipsum
             button.basic-btn.red.intro__btn(type='button') Зареєструватись
@@ -25,16 +25,17 @@ html(lang='uk')
       main.content
         section.section.mission-section
           .container
-            h3.mission-section__title Місія
-            .mission-section__cols
-              .mission-section__col
+            .row
+              h3.mission-section__title Місія
+            .row.cols-wrapper
+              .col-xs-6.col-sm-4
                 p
                   | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              .mission-section__col
+              .col-xs-6.col-sm-4
                 p
                   | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              .mission-section__col
-                .robo-img
+              .col-xs-offset-4.col-xs-4.robo-wrapper
+                img(src='./images/icons/robo.svg', alt='RoboClub IF')
         section.section.quotes-section
           .container
             .quotes-slider
@@ -66,43 +67,47 @@ html(lang='uk')
         section.section
           .container
             h2.section__title Останні новини
-            ul.big-news.last
-              li.big-news__item
-                img.big-news__photo(src='./images/news_1.jpg', height='240', width='240')
-                .big-news__desc
-                  h3.big-news__title
-                    a(href='#') Lorem Ipsum is simply dummy text
-                  p.big-news__date 20 січня 2017
-                  a.big-news__link.basic-btn.yellow(href='#')
-                    i.fa.fa-link(aria-hidden='true')
-                    |  Дивитись
-              li.big-news__item.blue
-                img.big-news__photo(src='./images/news_2.jpg', height='240', width='240')
-                .big-news__desc
-                  h3.big-news__title
-                    a(href='#') Lorem Ipsum is simply dummy text
-                  p.big-news__date 20 січня 2017
-                  a.big-news__link.basic-btn.yellow(href='#')
-                    i.fa.fa-link(aria-hidden='true')
-                    |  Дивитись
-              li.big-news__item
-                img.big-news__photo(src='./images/news_3.jpg', height='240', width='240')
-                .big-news__desc
-                  h3.big-news__title
-                    a(href='#') Lorem Ipsum is simply dummy text
-                  p.big-news__date 20 січня 2017
-                  a.big-news__link.basic-btn.yellow(href='#')
-                    i.fa.fa-link(aria-hidden='true')
-                    |  Дивитись
-              li.big-news__item.blue
-                img.big-news__photo(src='./images/news_4.jpg', height='240', width='240')
-                .big-news__desc
-                  h3.big-news__title
-                    a(href='#') Lorem Ipsum is simply dummy text
-                  p.big-news__date 20 січня 2017
-                  a.big-news__link.basic-btn.yellow(href='#')
-                    i.fa.fa-link(aria-hidden='true')
-                    |  Дивитись
+            ul.row.big-news.last
+              li.col-xs-offset-2.col-xs-8.col-sm-offset-0.col-sm-4.col-md-3
+                .big-news__item
+                  img.big-news__photo(src='./images/news_1.jpg', height='240', width='240')
+                  .big-news__desc
+                    h3.big-news__title
+                      a(href='#') Lorem Ipsum is simply dummy text
+                    p.big-news__date 20 січня 2017
+                    a.big-news__link.basic-btn.yellow(href='#')
+                      i.fa.fa-link(aria-hidden='true')
+                      |  Дивитись
+              li.col-xs-offset-2.col-xs-8.col-sm-offset-0.col-sm-4.col-md-3
+                .big-news__item.blue
+                  img.big-news__photo(src='./images/news_2.jpg', height='240', width='240')
+                  .big-news__desc
+                    h3.big-news__title
+                      a(href='#') Lorem Ipsum is simply dummy text
+                    p.big-news__date 20 січня 2017
+                    a.big-news__link.basic-btn.yellow(href='#')
+                      i.fa.fa-link(aria-hidden='true')
+                      |  Дивитись
+              li.col-xs-offset-2.col-xs-8.col-sm-offset-0.col-sm-4.col-md-3
+                .big-news__item
+                  img.big-news__photo(src='./images/news_3.jpg', height='240', width='240')
+                  .big-news__desc
+                    h3.big-news__title
+                      a(href='#') Lorem Ipsum is simply dummy text
+                    p.big-news__date 20 січня 2017
+                    a.big-news__link.basic-btn.yellow(href='#')
+                      i.fa.fa-link(aria-hidden='true')
+                      |  Дивитись
+              li.col-xs-offset-2.col-xs-8.col-sm-offset-0.col-sm-4.col-md-3
+                .big-news__item.blue
+                  img.big-news__photo(src='./images/news_4.jpg', height='240', width='240')
+                  .big-news__desc
+                    h3.big-news__title
+                      a(href='#') Lorem Ipsum is simply dummy text
+                    p.big-news__date 20 січня 2017
+                    a.big-news__link.basic-btn.yellow(href='#')
+                      i.fa.fa-link(aria-hidden='true')
+                      |  Дивитись
             button.basic-btn.yellow.centered(type='button') Всі новини
         section.section.ready.dark
           .container
@@ -111,27 +116,27 @@ html(lang='uk')
             button.basic-btn.yellow.centered(type='button') Зареєструватись
         section.section.partners.container
           h2.section__title Наші партнери
-          ul.partners-list
-            li.partners-list__item
+          .partners-list
+            .item
               a(href='#')
-                img(src='./images/icons/partners_1.jpg', height='46', width='100')
-            li.partners-list__item
+                img(src='./images/icons/partners_1.jpg')
+            .item
               a(href='#')
-                img(src='./images/icons/partners_2.jpg', height='46', width='100')
-            li.partners-list__item
+                img(src='./images/icons/partners_2.jpg')
+            .item
               a(href='#')
-                img(src='./images/icons/partners_3.jpg', height='46', width='100')
-            li.partners-list__item
+                img(src='./images/icons/partners_3.jpg')
+            .item
               a(href='#')
-                img(src='./images/icons/partners_4.jpg', height='46', width='100')
-            li.partners-list__item
+                img(src='./images/icons/partners_4.jpg')
+            .item
               a(href='#')
-                img(src='./images/icons/partners_5.jpg', height='46', width='100')
-            li.partners-list__item
+                img(src='./images/icons/partners_5.jpg')
+            .item
               a(href='#')
-                img(src='./images/icons/partners_6.jpg', height='46', width='100')
-            li.partners-list__item
+                img(src='./images/icons/partners_6.jpg')
+            .item
               a(href='#')
-                img(src='./images/icons/partners_7.jpg', height='46', width='100')
+                img(src='./images/icons/partners_7.jpg')
         +contacts()
       +footer()
