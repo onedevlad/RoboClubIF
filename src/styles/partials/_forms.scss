@@ -74,14 +74,29 @@
 		display: flex;
 		align-items: center;
 		font-size: 21px;
-	}
 
+		@media screen and (max-width: 768px) {
+			display: block;
+			text-align: center;
+	    }
+  	}
 	&__form-line {
 		margin: 0 0 0 16px;
 		width: 160px;
 
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			margin: 10px 0;
+		}
+
 		&.age {
 			width: 80px;
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
 		}
+	}
+	@media screen and (max-width: 768px) {
+		display: block;
 	}
 }

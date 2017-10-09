@@ -13,21 +13,21 @@ html(lang='uk')
       main.content
         h2.content-title Курси
         .container
-          form.courses-filter
-            h4.courses-filter__title Фільтрувати
-            .courses-filter__form-line
+          form.courses-filter.row
+            h4.courses-filter__title.col-sm-3 Фільтрувати
+            .courses-filter__form-line.col-sm-3
               select.basic-select(data-filter='cat')
                 option(value='') Напрям
                 option(value='constr') Конструювання
                 option(value='progr') Програмування
-            .courses-filter__form-line.age
+            .courses-filter__form-line.age.col-sm-3
               select.basic-select(data-filter='age')
                 option(value='') Вік
                 option(value='5') 5+
                 option(value='8') 8+
                 option(value='9') 9+
                 option(value='18') 18+
-            .courses-filter__form-line
+            .courses-filter__form-line.col-sm-3
               select.basic-select(data-filter='pay')
                 option(value='') Платність
                 option(value='free') Безкоштовно

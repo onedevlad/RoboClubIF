@@ -261,6 +261,10 @@
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
+  
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 
   &.last {
     margin-bottom: 0;
@@ -421,8 +425,17 @@
   color: #fff;
   min-height: 400px;
 
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+
   .section__title{
     text-align: left;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+    
   }
 
   &__info{
@@ -477,6 +490,13 @@
     bottom: 0;
     right: 0;
     left: 50%;
+    
+    @media screen and (max-width: 767px) {
+      position: relative;
+      height: 450px;
+      left: 0; 
+      padding-top: 35px;
+    }
 
     &:after{
       content: '';
@@ -489,6 +509,10 @@
       border-width: 37px 0 37px 37px;
       border-color: transparent transparent transparent #00b8d4;
       z-index: 1;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     #map{
