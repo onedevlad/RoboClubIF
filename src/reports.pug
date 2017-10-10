@@ -1,7 +1,9 @@
 include ./templates/head
 include ./templates/header
 include ./templates/contacts
+include ./templates/report
 include ./templates/footer
+
 
 doctype html
 html(lang='uk')
@@ -13,35 +15,11 @@ html(lang='uk')
         h2.content-title Фінансові звіти
         .container
           ul.reports-list
-            li.reports-list__item
-              a.reports-list__link(href='#')
-                p.reports-list__date 20 квітня 2017
-                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                .reports-list__btn Дивитись
-            li.reports-list__item
-              a.reports-list__link(href='#')
-                p.reports-list__date 20 квітня 2017
-                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                .reports-list__btn Дивитись
-            li.reports-list__item
-              a.reports-list__link(href='#')
-                p.reports-list__date 20 квітня 2017
-                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                .reports-list__btn Дивитись
-            li.reports-list__item
-              a.reports-list__link(href='#')
-                p.reports-list__date 20 квітня 2017
-                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                .reports-list__btn Дивитись
-            li.reports-list__item
-              a.reports-list__link(href='#')
-                p.reports-list__date 20 квітня 2017
-                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                .reports-list__btn Дивитись
-            li.reports-list__item
-              a.reports-list__link(href='#')
-                p.reports-list__date 20 квітня 2017
-                h3.reports-list__title Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                .reports-list__btn Дивитись
+            +report('20 квітня 2017', '1Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'Дивитись')
+            +report('20 квітня 2017', '2Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'Дивитись')
+            +report('20 квітня 2017', '3Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'Дивитись')
+            +report('20 квітня 2017', '4Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'Дивитись')
+            +report('20 квітня 2017', '5Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'Дивитись')
+            +report('20 квітня 2017', '6Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'Дивитись')
         +contacts()
       +footer()

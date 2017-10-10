@@ -10,65 +10,78 @@ const cssnext = require('postcss-cssnext')
 const precss = require('precss')
 const uglify = require('gulp-uglify')
 const del = require('del')
-const livereload = require('gulp-livereload')
+const browserSync = require('browser-sync').create()
 
+
+const onError = function(err) {
+  console.log(err)
+  this.emit('end')
+}
+
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: "./build",
+    notify: false,
+  })
+})
 
 gulp.task('clean', function() {
-	return del.sync('build/*')
+  return del.sync('build/*')
 })
 
 gulp.task('views', function() {
-	return gulp.src(['src/**/*.pug', '!src/templates/*'])
-		.pipe(pug())
-		.pipe( gulp.dest('build/') )
-		.pipe(livereload())
+  return gulp.src(['src/**/*.pug', '!src/templates/*'])
+    .pipe(pug())
+    .on('error', onError)
+    .pipe( gulp.dest('build/') )
+    .on('finish', browserSync.reload)
 })
 
 gulp.task('styles', function() {
-	var plugins = [
-		precss(),
-		autoprefixer({browsers: ['last 2 version']}),
-		cssnano()
-	]
+  var plugins = [
+    precss(),
+    autoprefixer({browsers: ['last 2 version']}),
+    cssnano()
+  ]
 
-	gulp.src('src/styles/**/*.scss')
-		.pipe(wait(100))
-		.pipe(sass())
-		.pipe(sourcemaps.init())
-		.pipe(postcss(plugins))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('build/styles/'))
-		.pipe(livereload())
-
+  gulp.src('src/styles/**/*.scss')
+    .pipe(wait(100))
+    .pipe(sass())
+    .pipe(sourcemaps.init())
+    .pipe(postcss(plugins))
+    .pipe(sourcemaps.write('.'))
+    .on('error', onError)
+    .pipe(gulp.dest('build/styles/'))
 })
 
 gulp.task('scripts', function() {
-	return gulp.src('src/scripts/*.js')
-		.pipe( sourcemaps.init() )
-		.pipe(uglify())
-		.pipe( sourcemaps.write('.') )
-		.pipe( gulp.dest('build/scripts/') )
-		.pipe(livereload())
+  return gulp.src('src/scripts/*.js')
+    .pipe( sourcemaps.init() )
+    .pipe(uglify())
+    .pipe( sourcemaps.write('.') )
+    .on('error', onError)
+    .pipe( gulp.dest('build/scripts/') )
 })
 
 gulp.task('fonts', function() {
-	return gulp.src('src/fonts/*')
-		.pipe( gulp.dest('build/fonts/') )
+  return gulp.src('src/fonts/*')
+    .on('error', onError)
+    .pipe( gulp.dest('build/fonts/') )
 })
 
 gulp.task('images', function() { // TODO: Apply compression
-	return gulp.src('src/images/**/*')
-		.pipe(gulp.dest('build/images/'))
+  return gulp.src('src/images/**/*')
+    .on('error', onError)
+    .pipe(gulp.dest('build/images/'))
 })
 
 gulp.task('watch', function() {
-	livereload.listen();
-	gulp.watch('src/fonts/*', ['fonts'])
-	gulp.watch('src/images/*', ['images'])
-	gulp.watch('src/*.pug', ['views'])
-	gulp.watch('src/templates/*', ['views'])
-	gulp.watch('src/styles/**/*.scss', ['styles'])
-	gulp.watch('src/scripts/*.js', ['scripts'])
+  gulp.watch('src/fonts/*', ['fonts'])
+  gulp.watch('src/images/*', ['images'])
+  gulp.watch('src/*.pug', ['views'])
+  gulp.watch('src/templates/*', ['views'])
+  gulp.watch('src/styles/**/*.scss', ['styles'])
+  gulp.watch('src/scripts/*.js', ['scripts'])
 })
 
-gulp.task('default', ['clean', 'views', 'styles', 'scripts', 'fonts', 'images', 'watch'])
+gulp.task('default', ['clean', 'views', 'browser-sync', 'styles', 'scripts', 'fonts', 'images', 'watch'])

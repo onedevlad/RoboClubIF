@@ -7,7 +7,6 @@
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-livereload": "^3.8.1",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
@@ -17,5 +16,7 @@
     "postcss-cssnext": "^3.0.2",
     "precss": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
 }
