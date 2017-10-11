@@ -2,6 +2,7 @@ include ./templates/head
 include ./templates/header
 include ./templates/contacts
 include ./templates/footer
+include ./templates/course
 
 doctype html
 html(lang='uk')
@@ -32,150 +33,23 @@ html(lang='uk')
                 option(value='') Платність
                 option(value='free') Безкоштовно
                 option(value='premium') Платно
-          ul.big-news.courses
-            li.big-news__item(data-cat='constr', data-age='18', data-pay='free')
-              img.big-news__photo(src='pic/news_1.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 18+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='8')
-              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 8+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item(data-cat='constr', data-age='5')
-              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 5+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='9', data-pay='free')
-              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 9+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='9')
-              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 9+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item(data-cat='constr', data-age='5')
-              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 5+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='constr', data-age='8', data-pay='free')
-              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 8+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='9', data-pay='free')
-              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 9+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='constr', data-age='8', data-pay='free')
-              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 8+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='8')
-              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 8+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item(data-cat='constr', data-age='5')
-              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 5+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='9', data-pay='free')
-              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 9+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='progr', data-age='9')
-              img.big-news__photo(src='pic/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 9+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item(data-cat='constr', data-age='5')
-              img.big-news__photo(src='pic/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 5+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue(data-cat='constr', data-age='8', data-pay='free')
-              img.big-news__photo(src='pic/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 8+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item(data-cat='constr', data-age='18')
-              img.big-news__photo(src='pic/news_1.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__age 18+
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
+          ul.big-news.courses.row
+            +course('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_2.jpg', 'blue')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_3.jpg', 'orange')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_4.jpg', 'blue')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_1.jpg', 'orange')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'blue')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_2.jpg', 'orange')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_3.jpg', 'blue')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_4.jpg', 'orange')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_1.jpg', 'blue')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_2.jpg', 'blue')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_3.jpg', 'orange')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_4.jpg', 'blue')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_1.jpg', 'orange')
+            +course('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_3.jpg', 'blue')
+            +course('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_2.jpg', 'orange')
         +contacts()
       +footer()
