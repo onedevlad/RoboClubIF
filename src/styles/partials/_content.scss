@@ -6,6 +6,7 @@
 }
 
 .content-title{
+  text-align: center;
   display: flex;
   align-content: center;
   align-items: center;
@@ -276,7 +277,7 @@
     overflow: hidden;
     // background: #ccc;
     margin: 0 0 30px;
-
+  
     &:after{
       content: '';
       position: absolute;
@@ -335,7 +336,8 @@
 
     &:hover{
 
-
+      cursor: pointer;
+      
       .big-news__link{
         opacity: 1;
       }
