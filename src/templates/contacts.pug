@@ -4,14 +4,14 @@ mixin contacts()
       .row
         .col-xs-10.col-xs-offset-1
           h3.section__title Контакти
-          .contacts-section__info
-            .contacts-section__info-item
+          .contacts-section__info.row
+            .contacts-section__info-item.col-xs-6
               i.fa.fa-map-marker(aria-hidden='true')
               p
                 | м. Івано-Франківськ
                 br
                 |  вул. Південний бульвар, 22
-            .contacts-section__info-item
+            .contacts-section__info-item.col-xs-6
               i.fa.fa-phone(aria-hidden='true')
               p
                 a(href='tel:0995439522') 099 543 9522
@@ -55,4 +55,4 @@ mixin contacts()
             icon: './images/icons/marker.svg'
           });
         }
-      script(async='', defer, src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA-ZEocFpuybFyJZg92LhWsvIJdo56S34s&callback=initMap')
+      script(async='', defer, src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA-ZEocFpuybFyJZg92LhWsvIJdo56S34s&callback=initMap&language=uk&region=UA"')

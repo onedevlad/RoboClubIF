@@ -261,7 +261,7 @@
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
-  
+
   @media screen and (max-width: 768px) {
     display: block;
   }
@@ -435,31 +435,38 @@
     @media screen and (max-width: 768px) {
       text-align: center;
     }
-    
+
   }
 
   &__info{
-    display: flex;
-    margin-bottom: 34px;
+    // display: flex;
+    // margin-bottom: 34px;
+    @media (max-width: 480px) { font-size: 3vw }
+    @media (min-width: 480px) { font-size: 13px }
   }
 
-  &__info-item{
-    position: relative;
-    padding: 0 0 0 30px;
-    margin: 11px 0;
-    flex: 1 1 50%;
 
+  &__info-item{
+    margin: 1em 0;
+    white-space: nowrap;
+    // position: relative;
+    // margin: 11px 0;
+    // flex: 1 1 50%;
+    &:last-child {
+      text-align: right;
+    }
     i{
       font-size: 24px;
-      position: absolute;
-      left: 1px;
-      top: 3px;
+      // position: absolute;
+      // left: 1px;
+      // top: 3px;
     }
 
     p{
+      text-align: left;
+      display: inline-block;
       padding: 0;
-      margin: 0;
-      font-size: 13px;
+      margin: 0 0 0 0.5em;
     }
 
     a {
@@ -490,11 +497,11 @@
     bottom: 0;
     right: 0;
     left: 50%;
-    
+
     @media screen and (max-width: 767px) {
       position: relative;
       height: 450px;
-      left: 0; 
+      left: 0;
       padding-top: 35px;
     }
 
@@ -604,9 +611,8 @@
   justify-content: space-between;
   letter-spacing: 0.01em;
 
-  &__item{
-    flex: 1 1 270px;
-    margin: 0 0 23px 20px;
+  & li {
+    margin: 0.5em 0;
   }
 
   &__link {
@@ -641,6 +647,7 @@
   }
 
   &__title {
+    text-align: justify;
     padding: 0 0 16px;
     margin: 0 0 9px;
     font-weight: normal;
