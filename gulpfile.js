@@ -53,6 +53,7 @@ gulp.task('styles', function() {
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/styles/'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('scripts', function() {
@@ -76,7 +77,11 @@ gulp.task('images', function() { // TODO: Apply compression
     .pipe(gulp.dest('build/images/'))
 })
 
-gulp.task('watch', function() {
+gulp.task('watch', function(gulpCallback) {
+  gulp.watch('build/styles/main.css', function() {
+    gulp.src('build/styles/main.css').pipe(browserSync.stream())
+    gulpCallback()
+  })
   gulp.watch('src/fonts/*', ['fonts'])
   gulp.watch('src/images/*', ['images'])
   gulp.watch('src/*.pug', ['views'])
