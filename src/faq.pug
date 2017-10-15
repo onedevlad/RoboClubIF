@@ -1,0 +1,57 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+include ./templates/faq
+
+doctype html
+html(lang='uk')
+  +head('RoboClub FAQ')
+  body
+    .wrapper
+      +header('about')
+      main.content
+        h2.content-title FAQ
+        .container.faq-wrapper
+          +faq([
+          {
+            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laudantium.',
+            subs: [
+              {
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, earum?',
+                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maiores, nesciunt accusantium eum consectetur aliquam, esse, fugiat distinctio, libero quia dolore quaerat! Quidem saepe sint ad tempore voluptate est corporis eum ullam maiores, soluta velit vel sunt fuga quae, suscipit.',
+              },
+              {
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, earum?',
+                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maiores, nesciunt accusantium eum consectetur aliquam, esse, fugiat distinctio, libero quia dolore quaerat! Quidem saepe sint ad tempore voluptate est corporis eum ullam maiores, soluta velit vel sunt fuga quae, suscipit.',
+              }
+            ],
+          },
+          {
+            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laudantium.',
+            subs: [
+              {
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, earum?',
+                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maiores, nesciunt accusantium eum consectetur aliquam, esse, fugiat distinctio, libero quia dolore quaerat! Quidem saepe sint ad tempore voluptate est corporis eum ullam maiores, soluta velit vel sunt fuga quae, suscipit.',
+              },
+              {
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, earum?',
+                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maiores, nesciunt accusantium eum consectetur aliquam, esse, fugiat distinctio, libero quia dolore quaerat! Quidem saepe sint ad tempore voluptate est corporis eum ullam maiores, soluta velit vel sunt fuga quae, suscipit.',
+              }
+            ],
+          },
+          {
+            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laudantium.',
+            subs: [
+              {
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, earum?',
+                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maiores, nesciunt accusantium eum consectetur aliquam, esse, fugiat distinctio, libero quia dolore quaerat! Quidem saepe sint ad tempore voluptate est corporis eum ullam maiores, soluta velit vel sunt fuga quae, suscipit.',
+              },
+              {
+                subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, earum?',
+                text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maiores, nesciunt accusantium eum consectetur aliquam, esse, fugiat distinctio, libero quia dolore quaerat! Quidem saepe sint ad tempore voluptate est corporis eum ullam maiores, soluta velit vel sunt fuga quae, suscipit.',
+              }
+            ],
+          }])
+        +contacts()
+      +footer()

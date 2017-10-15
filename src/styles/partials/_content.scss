@@ -277,7 +277,7 @@
     overflow: hidden;
     // background: #ccc;
     margin: 0 0 30px;
-  
+
     &:after{
       content: '';
       position: absolute;
@@ -337,7 +337,7 @@
     &:hover{
 
       cursor: pointer;
-      
+
       .big-news__link{
         opacity: 1;
       }
@@ -735,5 +735,67 @@
 @media (max-width: 768px) {
   .intro {
     text-align: center;
+  }
+}
+
+
+.faq-wrapper {
+  .item-wrapper {
+    cursor: pointer;
+    margin: 0 0 30px 0;
+    .title-wrapper span,
+    .subtitle-wrapper span {
+      line-height: 1.5em;
+      position: relative;
+      padding-left: 2em;
+      box-decoration-break: clone;
+      &:before {
+        content: '';
+        width: 0.75em;
+        height: 0.75em;
+        margin: 0.35em 0 0 -1.5em;
+        position: absolute;
+        display: inline-block;
+      }
+    }
+    .title-wrapper span:before { background: url('../images/icons/plus-white.svg') 0 0/100% 100% no-repeat }
+    .subtitle-wrapper span:before { background: url('../images/icons/plus.svg') 0 0/100% 100% no-repeat }
+
+    .title-wrapper {
+      .title-inner-wrapper { padding: 0;}
+      .title {
+        display: table;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        border-radius: 5px;
+        background: #00B8D4;
+        padding: 10px 0.75em;
+        color: white;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0.75em;
+          height: 100%;
+          background: #f89f4f;
+        }
+      }
+    }
+    .subtitle-wrapper {
+      display: none;
+      .subtitle {
+        color: #00B8D4;
+        padding: 30px 0 0 50px;
+      }
+    }
+    .text-wrapper {
+      display: none;
+      .text {
+        text-align: justify;
+        padding: 10px 0 0 100px;
+      }
+    }
   }
 }

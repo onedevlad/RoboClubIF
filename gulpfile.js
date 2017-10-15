@@ -22,6 +22,7 @@ gulp.task('browser-sync', function() {
   browserSync.init({
     server: "./build",
     notify: false,
+    open: false,
   })
 })
 
@@ -47,10 +48,10 @@ gulp.task('styles', function() {
   gulp.src('src/styles/**/*.scss')
     .pipe(wait(100))
     .pipe(sass())
+    .on('error', onError)
     .pipe(sourcemaps.init())
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write('.'))
-    .on('error', onError)
     .pipe(gulp.dest('build/styles/'))
 })
 
@@ -58,8 +59,8 @@ gulp.task('scripts', function() {
   return gulp.src('src/scripts/*.js')
     .pipe( sourcemaps.init() )
     .pipe(uglify())
-    .pipe( sourcemaps.write('.') )
     .on('error', onError)
+    .pipe( sourcemaps.write('.') )
     .pipe( gulp.dest('build/scripts/') )
 })
 

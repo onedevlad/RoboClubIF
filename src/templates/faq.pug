@@ -1,0 +1,16 @@
+mixin faq(items)
+  each item, itemIndex in items
+    .item-wrapper.row(id='item-'+itemIndex)
+      .title-wrapper.row
+        .col-xs-12.title-inner-wrapper
+          .title(id='item-title-'+itemIndex)
+            span= item.title
+      each sub, subIndex in item.subs
+        .subtitle-wrapper.row(id='item-subtitle-'+itemIndex+'-'+subIndex, class='item-'+itemIndex+'-content')
+          .col-xs-12
+            .subtitle
+              span= sub.subtitle
+        .text-wrapper.row(id='item-text-'+itemIndex+'-'+subIndex, class='item-'+itemIndex+'-content')
+          .col-xs-12
+            .text
+              span= sub.text
