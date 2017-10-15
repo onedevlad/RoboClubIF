@@ -1,4 +1,4 @@
-mixin course(category, title, age, price, preview, color)
+mixin coursePreview(category, title, age, price, preview, color)
   li.big-news__item.col-sm-3(data-cat=category, data-age=age, class= color)
     img.big-news__photo(src=preview, height='240', width='240')
     .big-news__desc
@@ -7,3 +7,11 @@ mixin course(category, title, age, price, preview, color)
       p.big-news__age= age + '+'
       a.big-news__link.basic-btn.yellow(href='#')
         i.fa.fa-link(aria-hidden='true') Дивитись
+
+mixin coursePlan(lessonNumber, lessonDuration, lessonTitle)
+  .row
+    .course-plan.col-xs-12
+      span.plan-wrapper
+        span.lesson-number= 'Заняття '+lessonNumber
+        span.lesson-title= ' - ' + lessonTitle
+        span.lesson-duration= ' (' + lessonDuration + ' год)'

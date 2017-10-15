@@ -136,3 +136,13 @@ $(document).ready(function() {
     }
   })
 })
+
+$(document).ready(function() {
+  $('.gallery-preview-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    slidesToShow: 6,
+    swipeToSlide: true,
+  })
+})

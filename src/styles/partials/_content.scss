@@ -799,3 +799,40 @@
     }
   }
 }
+
+.course {
+  .short-desc {
+    .subtitle,
+    .lesson-duration {
+      color: #f79f50;
+    }
+    .lesson-number {
+      color: #00b8d5;
+    }
+    .plan-wrapper {
+      display: block;
+      margin: 5px 0;
+    }
+    .signinButton {
+      margin: 15px 0;
+      text-align: center;
+    }
+  }
+  .gallery-preview-wrapper {
+    background: #f79f50;
+    .gallery-preview {
+      h3 {
+        color: white;
+      }
+      .gallery-preview-slider {
+        margin: 0 -5px 30px -5px;
+        .slide {
+          margin: 0 5px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
