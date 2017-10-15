@@ -820,6 +820,7 @@
   }
   .gallery-preview-wrapper {
     background: #f79f50;
+    margin: 50px 0 0 0;
     .gallery-preview {
       h3 {
         color: white;
@@ -832,6 +833,48 @@
             width: 100%;
           }
         }
+      }
+    }
+  }
+  .lessons-desc {
+    margin: 20px auto 30px auto;
+    .lesson-desc {
+      .lesson-title {
+        margin: 30px 0;
+        color: white;
+        background: #00b8d5;
+        border-radius: 0 30px 30px 0;
+        position: relative;
+        display: inline-block;
+        h2 {
+          margin: 15px 0;
+          padding: 0 100px 0 30px;
+          display: inline-block;
+        }
+        img {
+          position: absolute;
+          right: 0.5%;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 80%;
+          max-height: 60px;
+        }
+      }
+      .lesson-tasks {
+        .task-wrapper {
+          line-height: 1.5em;
+          display: block;
+          font-size: 0.75em;
+          .task-estimate {
+            color: #f79f50;
+          }
+        }
+      }
+      .additional-info {
+        color: #f79f50;
+        font-size: 0.75em;
+        margin: 15px 0;
+        line-height: 1.5em;
       }
     }
   }

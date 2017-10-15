@@ -15,3 +15,16 @@ mixin coursePlan(lessonNumber, lessonDuration, lessonTitle)
         span.lesson-number= 'Заняття '+lessonNumber
         span.lesson-title= ' - ' + lessonTitle
         span.lesson-duration= ' (' + lessonDuration + ' год)'
+
+mixin lessonPlan(lessonNumber, lessonTitle, tasks, addititonalInfo)
+  .row.lesson-desc
+    .lesson-title
+      h2= 'Заняття ' + lessonNumber + ': ' + lessonTitle
+      img(src='./images/icons/logo-gear.svg', alt='')
+    .lesson-tasks
+      each task, index in tasks
+        span.task-wrapper
+          =(index + 1) + '. '
+          span.task-text= task.text
+          span.task-estimate= ' (' + task.estimate + ')'
+    .additional-info= '* - ' + addititonalInfo
