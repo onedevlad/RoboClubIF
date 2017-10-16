@@ -1,0 +1,52 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+include ./templates/team
+
+doctype html
+html(lang='uk')
+  +head('RoboClub Team')
+  body.team
+    .wrapper
+      +header('about')
+      main.content
+        h2.content-title Наша команда
+        .container
+          .row
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+            +teamMember('John Doe', 'Lorem ipsum', [
+              {name: 'facebook', link: 'http://facebook.com' },
+              {name: 'vk', link: 'http://vk.com'}
+            ])
+        .row.button-wrapper
+          .basic-btn.yellow Стати членом команди
+        +contacts()
+      +footer()

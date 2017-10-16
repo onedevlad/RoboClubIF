@@ -1068,3 +1068,60 @@
     }
   }
 }
+
+.team {
+  .team-member-wrapper {
+    color: white;
+    margin: 0 0 30px 0;
+    .team-member-photo {
+      width: 100%;
+    }
+    .person-desc-wrapper {
+      position: relative;
+      .person-full-desc {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.3s ease;
+        display: block;
+        overflow: hidden;
+        font-size: 0.75em;
+        background: rgba(#00b8d5, 0.75);
+        overflow: hidden;
+        span {
+          position: absolute;
+          bottom: 0;
+          display: block;
+          margin: 10px 10px 20px;
+          vertical-align: bottom;
+        }
+      }
+      &:hover .person-full-desc {
+        opacity: 1;
+      }
+    }
+    .person-short-desc {
+      background: #00B8D5;
+      padding: 0 15px;
+      h3 {
+        margin: -5px 0 0 0;
+        padding: 10px 0;
+      }
+      .person-socials {
+        .fa,
+        .fa:link,
+        .fa:visited {
+          cursor: pointer;
+          color: white;
+          margin: 0 15px 10px 0;
+        }
+      }
+    }
+  }
+  .button-wrapper {
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+}
