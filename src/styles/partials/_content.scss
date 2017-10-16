@@ -849,7 +849,7 @@
         display: inline-block;
         h2 {
           margin: 15px 0;
-          padding: 0 100px 0 30px;
+          padding: 0 70px 0 30px;
           display: inline-block;
         }
         img {
@@ -930,6 +930,108 @@
       margin: 0;
       padding: 15px 0;
       text-align: center;
+    }
+  }
+}
+
+.mission {
+  .title-line-wrapper {
+    margin: 0 0 30px;
+    .title-line {
+      width: 60%;
+      position: relative;
+      color: white;
+      display: inline-block;
+      h2 {
+        margin: 15px 0;
+        display: inline-block;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80%;
+        max-height: 60px;
+      }
+      &.title-blue { background: #00b8d5 }
+      &.title-orange { background: #f79f50 }
+      &.title-right {
+        position: relative;
+        left: 40%;
+        border-radius: 30px 0 0 30px;
+        h2{
+          padding: 0 30px 0 70px;
+        }
+        img {
+          left: 0.5%;
+        }
+      }
+      &.title-left {
+        position: relative;
+        border-radius: 0 30px 30px 0;
+        h2{
+          float: right;
+          padding: 0 70px 0 30px;
+        }
+        img {
+          right: 0.5%;
+        }
+      }
+    }
+  }
+  .articles-row {
+    margin-bottom: 50px;
+    .column-wrapper {
+      .column {
+        text-align: justify;
+        &.right-column {
+          width: 65%;
+          margin-left: 35%;
+        }
+        &.left-column {
+          width: 65%;
+        }
+        .subtitle {
+          margin: 0 0 20px 0;
+          color: #f79f50;
+        }
+        span {
+          display: inline-block;
+          text-indent: 30px;
+        }
+        img {
+          width: 100%;
+          &.image-right { border-radius: 5px 0 0 5px }
+          &.image-left { border-radius: 0 5px 5px 0 }
+        }
+      }
+    }
+  }
+  .donation-wrapper {
+    background: #00b8d5;
+    margin: 0 0 50px 0;
+    padding: 0 0 15px 0;
+    position: relative;
+    .donation-text-wrapper {
+      color: white;
+      span {
+        font-size: 0.75em;
+      }
+    }
+    .donation-form-wrapper {
+      position: absolute;
+      height: 100%;
+      right: 0;
+      .basic-form {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .basic-input {
+          background: white;
+          color: #00B8D5;
+          &::placeholder {color: #00b8d5;}
+        }
+      }
     }
   }
 }
