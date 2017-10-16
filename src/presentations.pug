@@ -1,0 +1,23 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+include ./templates/presentation
+
+doctype html
+html(lang='uk')
+  +head('RoboClub Presentations')
+  body.presentations
+    .wrapper
+      +header('about')
+      main.content
+        h2.content-title Презентації
+        .container
+          .row
+            +presentation('Presentation Name', 'Ex ut ex commodo culpa quis occaecat cillum amet culpa cillum do enim excepteur ut aliquip adipisicing velit veniam nostrud.', 'http://google.com', 'http://google.com')
+            +presentation('Presentation Name', 'Ex ut ex commodo culpa quis occaecat cillum amet culpa cillum do enim excepteur ut aliquip adipisicing velit veniam nostrud.', 'http://google.com', 'http://google.com')
+            +presentation('Presentation Name', 'Ex ut ex commodo culpa quis occaecat cillum amet culpa cillum do enim excepteur ut aliquip adipisicing velit veniam nostrud.', 'http://google.com', 'http://google.com')
+            +presentation('Presentation Name', 'Ex ut ex commodo culpa quis occaecat cillum amet culpa cillum do enim excepteur ut aliquip adipisicing velit veniam nostrud.', 'http://google.com', 'http://google.com')
+            +presentation('Presentation Name', 'Ex ut ex commodo culpa quis occaecat cillum amet culpa cillum do enim excepteur ut aliquip adipisicing velit veniam nostrud.', 'http://google.com', 'http://google.com')
+        +contacts()
+      +footer()

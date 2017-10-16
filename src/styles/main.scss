@@ -92,12 +92,7 @@ input[type="reset"]:focus {
 	width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -107,7 +102,6 @@ h6 {
 @import "vendor/slick";
 
 @import "partials/fonts";
-@import "partials/icons";
 @import "partials/buttons";
 @import "partials/forms";
 

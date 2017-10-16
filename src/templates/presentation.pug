@@ -1,0 +1,16 @@
+mixin presentation(name, desc, previewLink, directLink)
+  .col-xs-10.col-xs-offset-1.presentation-wrapper
+    .row
+      .col-xs-6.presentation-desc-wrapper
+        h3.presentation-name= name
+        span.presentation-desc= desc
+      .col-xs-5.presentation-links-wrapper
+        .row
+          .col-md-6.button-wrapper
+            a(href=previewLink).basic-btn.yellow
+              span.fa.fa-eye
+              | Дивитись
+          .col-md-6.button-wrapper
+            a(href=directLink).basic-btn.yellow
+              span.fa.fa-download
+              | Завантажити
