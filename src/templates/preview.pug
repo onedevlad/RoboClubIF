@@ -1,0 +1,20 @@
+mixin preview(config)
+  div.preview(
+    class=config.sizes.xs ? 'col-xs-' + config.sizes.xs : '',
+    class=config.sizes.sm ? 'col-sm-' + config.sizes.sm : '',
+    class=config.sizes.md ? 'col-md-' + config.sizes.md : '',
+    class=config.sizes.lg ? 'col-lg-' + config.sizes.lg : ''
+  )&attributes(config.attrs)
+    .preview-wrapper(class=config.blue ? 'blue' : '')
+      img.preview-img(src=config.bgSRC, alt=config.title)
+      .overlay
+        .overlay-content
+          h3.title= config.title
+          span.date= config.date
+          .icon
+            if config.icon && config.icon.slice(0, 2) === 'fa'
+              span(class= config.icon)
+          .button-wrapper
+            a(href='#').basic-btn.yellow
+              span.fa.fa-link
+              =config.buttonText

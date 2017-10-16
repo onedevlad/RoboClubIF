@@ -6,26 +6,33 @@ mixin header(activeLink)
     nav.col-sm-9.col-md-7.hidden-xs.main-nav
       ul.main-menu
         li.main-menu__item(class= activeLink === 'index' ? 'active' : '')
-          a.main-menu__link(href='#') Головна
+          a.main-menu__link(href='/') Головна
         li.main-menu__item.has-sub(class= activeLink === 'about' ? 'active' : '')
-          a.main-menu__link(href='#') Про нас
+          a.main-menu__link(href='/team.html') Про нас
           ul.sub-menu
             li.sub-menu__item
-              a.sub-menu__link(href='#') RoboClub
+              a.sub-menu__link(href='/team.html') Команда
             li.sub-menu__item
-              a.sub-menu__link(href='#') CodeClub
+              a.sub-menu__link(href='/mission.html') Місія
             li.sub-menu__item
-              a.sub-menu__link(href='#') Design Squad
+              a.sub-menu__link(href='/presentations.html') Презентації
             li.sub-menu__item
-              a.sub-menu__link(href='#') Physics
+              a.sub-menu__link(href='/reports.html') Фінансові звіти
             li.sub-menu__item
-              a.sub-menu__link(href='#') Astronomy
-        li.main-menu__item(class= activeLink === 'courses' ? 'active' : '')
-          a.main-menu__link(href='#') Курси
+              a.sub-menu__link(href='/partners.html') Партнери
+            li.sub-menu__item
+              a.sub-menu__link(href='/comments.html') Відгуки
+            li.sub-menu__item
+              a.sub-menu__link(href='/faq.html') FAQ
+        li.main-menu__item.has-sub(class= activeLink === 'courses' ? 'active' : '')
+          a.main-menu__link(href='/courses.html') Курси
+          ul.sub-menu
+            li.sub-menu__item
+              a.sub-menu__link(href='/course.html') Lego Mindstorm
         li.main-menu__item(class= activeLink === 'news' ? 'active' : '')
-          a.main-menu__link(href='#') Новини
+          a.main-menu__link(href='/news.html') Новини
         li.main-menu__item(class= activeLink === 'gallery' ? 'active' : '')
-          a.main-menu__link(href='#') Галерея
+          a.main-menu__link(href='/gallery.html') Галерея
         li.main-menu__item(class= activeLink === 'contacts' ? 'active' : '')
           a.main-menu__link(href='#') Контакти
       ul.main-socials

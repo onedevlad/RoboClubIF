@@ -1,0 +1,137 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+include ./templates/preview
+
+doctype html
+html(lang='uk')
+  +head('RoboClub Gallery')
+  body.gallery
+    .wrapper
+      +header('gallery')
+      main.content
+        h2.content-title Галерея
+        .container
+          .row.filter-wrapper
+            .basic-btn.yellow.filter-button.active(data-filter='all') Все
+            .basic-btn.yellow.filter-button(data-filter='photo') Фото
+            .basic-btn.yellow.filter-button(data-filter='video') Відео
+          .row.gallery-wrapper
+            .row
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'video'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-video-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+                blue: true,
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+                blue: true,
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+                blue: true,
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'video'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-video-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+                blue: true
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'video'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-video-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+                blue: true,
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+              })
+              +preview({
+                title: 'Lorem ipsum dolor sit amet',
+                attrs: {'data-type': 'photo'},
+                date: '20 січня 2017',
+                bgSRC: './images/news_1.jpg',
+                icon: 'fa fa-camera',
+                buttonText: 'Дивитись',
+                sizes: {xs: 3},
+                blue: true,
+              })
+        +contacts()
+      +footer()
