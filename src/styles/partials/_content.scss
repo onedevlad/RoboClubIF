@@ -1035,3 +1035,36 @@
     }
   }
 }
+
+.partners {
+  .partner-wrapper {
+    display: flex;
+    align-items: stretch;
+    color: white;
+    margin: 0 0 30px 0;
+    background: #00b8d5;
+    border-radius: 5px;
+    border-left: solid 10px #f79f50;
+    position: relative;
+    .partner-logo-wrapper {
+      padding: 0;
+      background: white;
+      position: relative;
+      .partner-logo {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+      }
+    }
+    .partner-desc-wrapper {
+      .partner-name {
+        margin: 10px 0;
+      }
+      margin: 0 0 10px 0;
+      .partner-desc {
+        font-size: 0.75em;
+      }
+    }
+  }
+}

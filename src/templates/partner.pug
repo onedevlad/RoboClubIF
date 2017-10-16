@@ -1,0 +1,8 @@
+mixin partner(imgSRC, name, desc)
+  .col-sm-6
+    .row.partner-wrapper
+        .col-xs-4.partner-logo-wrapper
+          img.partner-logo(src=imgSRC, alt=name)
+        .col-xs-8.partner-desc-wrapper
+          h3.partner-name= name
+          span.partner-desc= desc

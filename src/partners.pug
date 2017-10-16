@@ -1,0 +1,26 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+include ./templates/partner
+
+doctype html
+html(lang='uk')
+  +head('RoboClub Partners')
+  body.partners
+    .wrapper
+      +header('about')
+      main.content
+        h2.content-title Партнери
+        .container
+          .row
+            +partner('./images/partners_1.jpg', 'Brand name', 'Ut laborum qui in ut in incididunt ut nulla nisi dolore do ad officia reprehenderit officia.')
+            +partner('./images/partners_2.jpg', 'Brand name', 'Ut laborum qui in ut in incididunt ut nulla nisi dolore do ad officia reprehenderit officia.')
+          .row
+            +partner('./images/partners_3.jpg', 'Brand name', 'Ut laborum qui in ut in incididunt ut nulla nisi dolore do ad officia reprehenderit officia.')
+            +partner('./images/partners_4.jpg', 'Brand name', 'Ut laborum qui in ut in incididunt ut nulla nisi dolore do ad officia reprehenderit officia.')
+            .row
+            +partner('./images/partners_1.jpg', 'Brand name', 'Ut laborum qui in ut in incididunt ut nulla nisi dolore do ad officia reprehenderit officia.')
+            +partner('./images/partners_2.jpg', 'Brand name', 'Ut laborum qui in ut in incididunt ut nulla nisi dolore do ad officia reprehenderit officia.')
+        +contacts()
+      +footer()
