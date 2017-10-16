@@ -1,5 +1,5 @@
 mixin coursePreview(category, title, age, price, preview, color)
-  li.big-news__item.col-sm-3(data-cat=category, data-age=age, class= color)
+  li.big-news__item.col-xs-6.col-sm-4.col-md-3(data-cat=category, data-age=age, class= color)
     img.big-news__photo(src=preview, height='240', width='240')
     .big-news__desc
       h3.big-news__title
@@ -17,14 +17,24 @@ mixin coursePlan(lessonNumber, lessonDuration, lessonTitle)
         span.lesson-duration= ' (' + lessonDuration + ' год)'
 
 mixin lessonPlan(lessonNumber, lessonTitle, tasks, addititonalInfo)
+  -var lessonNumber = +lessonNumber
+  -var tasksNeedEnumeration = !!lessonNumber
   .row.lesson-desc
     .lesson-title
-      h2= 'Заняття ' + lessonNumber + ': ' + lessonTitle
+      if tasksNeedEnumeration
+        h2= 'Заняття ' + lessonNumber + ': ' + lessonTitle
+      else
+        h2= lessonTitle
       img(src='./images/icons/logo-gear.svg', alt='')
     .lesson-tasks
       each task, index in tasks
         span.task-wrapper
-          =(index + 1) + '. '
+          if tasksNeedEnumeration
+            span= (index + 1) + '. '
+          if task.subtitle
+            span.task-subtitle= task.subtitle
           span.task-text= task.text
-          span.task-estimate= ' (' + task.estimate + ')'
-    .additional-info= '* - ' + addititonalInfo
+          if task.estimate
+            span.task-estimate= ' (' + task.estimate + ')'
+    if addititonalInfo
+      span.additional-info= '* - ' + addititonalInfo

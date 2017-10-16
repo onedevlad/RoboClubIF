@@ -91,6 +91,27 @@ html(lang='uk')
             {text: 'Sit laboris duis elit laboris anim amet incididunt pariatur laborum sed nisi dolor sint.', estimate: '~7 хв'},
             {text: 'Sit laboris duis elit laboris anim amet incididunt pariatur laborum sed nisi dolor sint.', estimate: '~5 хв'},
           ], 'Ad ut pariatur dolor sunt sed veniam duis amet excepteur sint laborum in laborum pariatur dolor aute amet in dolore ut dolore veniam laboris. Sint ea consequat minim ea nostrud veniam incididunt consectetur ullamco officia irure proident sed qui fugiat aliqua sint do esse eu fugiat est quis duis elit irure id incididunt ad elit anim do velit eiusmod adipisicing ut.')
-
+          +lessonPlan('0', 'Додатки', [
+            {subtitle: 'Теоретична частина:', text: 'Consequat aliquip incididunt occaecat aliqua ad sint amet cillum incididunt proident incididunt tempor nisi.'},
+            {subtitle: 'Теоретична частина:', text: 'Consequat aliquip incididunt occaecat aliqua ad sint amet cillum incididunt proident incididunt tempor nisi.'},
+            {subtitle: 'Теоретична частина:', text: 'Consequat aliquip incididunt occaecat aliqua ad sint amet cillum incididunt proident incididunt tempor nisi.'},
+            {subtitle: 'Теоретична частина:', text: 'Consequat aliquip incididunt occaecat aliqua ad sint amet cillum incididunt proident incididunt tempor nisi.'},
+          ])
+          .row.course-actions
+            .col-xs-4.signin-button-wrapper
+              .basic-btn.red.signin-button Записатись на курс
+            .socials-wrapper.col-md-3.col-sm-6.col-xs-8.pull-right
+              span.fa.fa-facebook
+              span.fa.fa-vk
+              span.fa.fa-twitter
+              span.fa.fa-ellipsis-h
+              span.share-count 4.2k
+        .container-fluid.see-also-header-wrapper
+          h2.see-also-header Дивіться також
+        .container.courses-preview-wrapper
+          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'blue')
+          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
+          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'blue')
+          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
         +contacts()
       +footer()
