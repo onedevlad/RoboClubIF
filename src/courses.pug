@@ -3,6 +3,7 @@ include ./templates/header
 include ./templates/contacts
 include ./templates/footer
 include ./templates/course
+include ./templates/preview
 
 doctype html
 html(lang='uk')
@@ -34,22 +35,107 @@ html(lang='uk')
                 option(value='free') Безкоштовно
                 option(value='premium') Платно
           ul.big-news.courses.row
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_2.jpg', 'blue')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_3.jpg', 'orange')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_4.jpg', 'blue')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_1.jpg', 'orange')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'blue')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_2.jpg', 'orange')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_3.jpg', 'blue')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_4.jpg', 'orange')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_1.jpg', 'blue')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_2.jpg', 'blue')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_3.jpg', 'orange')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_4.jpg', 'blue')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '9', 'free', './images/news_1.jpg', 'orange')
-            +coursePreview('progr', 'Lorem Ipsum is simply dummy text', '8', 'free', './images/news_3.jpg', 'blue')
-            +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '5', 'free', './images/news_2.jpg', 'orange')
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 9, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 18, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+              blue: true,
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 5, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 18, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+              blue: true,
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 5, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+              blue: true,
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 9, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 5, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+              blue: true,
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 8, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 9, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 18, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+              blue: true,
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 18, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+            })
+            +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'contsr', 'data-age': 18, 'data-price': 'free' },
+              icon: 'age',
+              bgSRC: './images/news_1.jpg',
+              buttonText: 'Дивитись',
+              sizes: {xs: 3},
+              blue: true,
+            })
         +contacts()
       +footer()

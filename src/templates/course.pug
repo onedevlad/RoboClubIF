@@ -1,5 +1,5 @@
 mixin coursePreview(category, title, age, price, preview, color)
-  li.big-news__item.col-xs-6.col-sm-4.col-md-3(data-cat=category, data-age=age, class= color)
+  li.big-news__item.col-xs-6.col-sm-4.col-md-3(data-cat=category, data-age=age, data-price=price class= color)
     img.big-news__photo(src=preview, height='240', width='240')
     .big-news__desc
       h3.big-news__title

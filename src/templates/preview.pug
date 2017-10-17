@@ -10,10 +10,14 @@ mixin preview(config)
       .overlay
         .overlay-content
           h3.title= config.title
-          span.date= config.date
+          if config.date
+            span.date= config.date
           .icon
-            if config.icon && config.icon.slice(0, 2) === 'fa'
-              span(class= config.icon)
+            if config.icon
+              if config.icon.slice(0, 2) === 'fa'
+                span(class= config.icon)
+              if config.icon === 'age'
+                span.age-icon= config.attrs['data-age'] + '+'
           .button-wrapper
             a(href='#').basic-btn.yellow
               span.fa.fa-link

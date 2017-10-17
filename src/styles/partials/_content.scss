@@ -1227,6 +1227,17 @@
       .icon {
         margin: 20px 0 0 0;
         font-size: 3em;
+        .age-icon {
+          font-size: 0.5em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2em;
+          height: 2em;
+          background: white;
+          color: $clr-blue;
+          border-radius: 50%;
+        }
       }
       .button-wrapper {
         position: absolute;
