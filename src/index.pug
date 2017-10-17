@@ -19,7 +19,7 @@ html(lang='uk')
           .col-md-6
             h1.intro__title Lorem Ipsum is simply
             p.intro__p Lorem Ipsum
-            button.basic-btn.red.intro__btn(type='button') Зареєструватись
+            a.basic-btn.red.intro__btn(href='https://docs.google.com/forms/d/e/1FAIpQLSfrSVaZQDWh3WFHDEAX_49ysAvfU5comCSM-XBJP-QZt1XWzQ/viewform') Зареєструватись
             button.intro__btn-video(type='button')
               i.fa.fa-play-circle(aria-hidden='true')
               |  Дивитись відео
@@ -73,31 +73,27 @@ html(lang='uk')
               +preview({
                 title: 'Lorem ipsum dolor sit amet',
                 date: '20 січня 2017',
+                link: './article.html',
                 bgSRC: './images/news_1.jpg',
-                buttonText: 'Дивитись',
-                sizes: {xs: 3},
               })
               +preview({
                 title: 'Lorem ipsum dolor sit amet',
                 date: '20 січня 2017',
+                link: './article.html',
                 bgSRC: './images/news_2.jpg',
-                buttonText: 'Дивитись',
-                sizes: {xs: 3},
                 blue: true,
               })
               +preview({
                 title: 'Lorem ipsum dolor sit amet',
                 date: '20 січня 2017',
+                link: './article.html',
                 bgSRC: './images/news_3.jpg',
-                buttonText: 'Дивитись',
-                sizes: {xs: 3},
               })
               +preview({
                 title: 'Lorem ipsum dolor sit amet',
                 date: '20 січня 2017',
+                link: './article.html',
                 bgSRC: './images/news_4.jpg',
-                buttonText: 'Дивитись',
-                sizes: {xs: 3},
                 blue: true,
               })
             a(href='/news.html')
@@ -106,7 +102,7 @@ html(lang='uk')
           .container
             h2.section__title Готові розпочати?
             h3.section__subtitle Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            button.basic-btn.yellow.centered(type='button') Зареєструватись
+            a.basic-btn.yellow.centered(href='https://docs.google.com/forms/d/e/1FAIpQLSfrSVaZQDWh3WFHDEAX_49ysAvfU5comCSM-XBJP-QZt1XWzQ/viewform') Зареєструватись
         section.section.partners.container
           h2.section__title Наші партнери
           .partners-list

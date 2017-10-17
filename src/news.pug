@@ -2,6 +2,7 @@ include ./templates/head
 include ./templates/header
 include ./templates/contacts
 include ./templates/footer
+include ./templates/preview
 
 doctype html
 html(lang='uk')
@@ -12,119 +13,37 @@ html(lang='uk')
       main.content
         h2.content-title Новини
         .container
-          ul.big-news
-            li.big-news__item.col-sm-4
-              img.big-news__photo(src='./images/news_1.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue.col-sm-4
-              img.big-news__photo(src='./images/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.col-sm-4
-              img.big-news__photo(src='./images/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue.col-sm-4
-              img.big-news__photo(src='./images/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue.col-sm-4
-              img.big-news__photo(src='./images/news_1.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.col-sm-4
-              img.big-news__photo(src='./images/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue.col-sm-4
-              img.big-news__photo(src='./images/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.col-sm-4
-              img.big-news__photo(src='./images/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.col-sm-4
-              img.big-news__photo(src='./images/news_1.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue.col-sm-4
-              img.big-news__photo(src='./images/news_2.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.col-sm-4
-              img.big-news__photo(src='./images/news_3.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
-            li.big-news__item.blue.col-sm-4
-              img.big-news__photo(src='./images/news_4.jpg', height='240', width='240')
-              .big-news__desc
-                h3.big-news__title
-                  a(href='#') Lorem Ipsum is simply dummy text
-                p.big-news__date 20 січня 2017
-                a.big-news__link.basic-btn.yellow(href='#')
-                  i.fa.fa-link(aria-hidden='true')
-                  |  Дивитись
+          .slick-news-slider
+            .slide
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+            .slide
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html' })
+              +preview({ title: 'Lorem ipsum is simply dummy text', date: '20 січня 2017', bgSRC: './images/news_1.jpg', link: './article.html', blue: true })
           ul.pager-list
             li.pager-list__item
-              .pager-list__link(disabled='') &#9668
+              span.pager-list__link.slick-news-slider-prev &#9668
             li.pager-list__item
-              a.pager-list__link(href='#') &#9658
+              span.pager-list__link.slick-news-slider-next &#9658
         +contacts()
       +footer()

@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create()
 
 
 const onError = function(err) {
-  console.log(err)
+  console.log(err);
   this.emit('end')
 }
 
@@ -57,7 +57,7 @@ gulp.task('styles', function() {
 })
 
 gulp.task('scripts', function() {
-  return gulp.src('src/scripts/*.js')
+  return gulp.src('src/scripts/**/*.js')
     .pipe( sourcemaps.init() )
     .pipe(uglify())
     .on('error', onError)

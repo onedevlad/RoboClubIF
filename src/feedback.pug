@@ -1,0 +1,17 @@
+include ./templates/head
+include ./templates/header
+include ./templates/contacts
+include ./templates/footer
+include ./templates/faq
+
+doctype html
+html(lang='uk')
+  +head('RoboClub Feedback')
+  body.feedback
+    .wrapper
+      +header('about')
+      main.content
+        h2.content-title Відгуки
+        .container
+        +contacts()
+      +footer()

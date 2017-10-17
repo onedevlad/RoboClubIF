@@ -17,11 +17,9 @@ mixin header(activeLink)
             li.sub-menu__item
               a.sub-menu__link(href='/presentations.html') Презентації
             li.sub-menu__item
-              a.sub-menu__link(href='/reports.html') Фінансові звіти
-            li.sub-menu__item
               a.sub-menu__link(href='/partners.html') Партнери
             li.sub-menu__item
-              a.sub-menu__link(href='/comments.html') Відгуки
+              a.sub-menu__link(href='/feedback.html') Відгуки
             li.sub-menu__item
               a.sub-menu__link(href='/faq.html') FAQ
         li.main-menu__item.has-sub(class= activeLink === 'courses' ? 'active' : '')
@@ -34,15 +32,47 @@ mixin header(activeLink)
         li.main-menu__item(class= activeLink === 'gallery' ? 'active' : '')
           a.main-menu__link(href='/gallery.html') Галерея
         li.main-menu__item(class= activeLink === 'contacts' ? 'active' : '')
-          a.main-menu__link(href='#') Контакти
+          a(href='#').main-menu__link.goto-contacts Контакти
       ul.main-socials
         li.main-socials__item
-          a.main-socials__link(href='#')
+          a.main-socials__link(href='https://www.facebook.com/RoboclubIF/')
             i.fa.fa-facebook(aria-hidden='true')
         li.main-socials__item
-          a.main-socials__link(href='#')
-            i.fa.fa-vk(aria-hidden='true')
-        li.main-socials__item
-          a.main-socials__link(href='#')
+          a.main-socials__link(href='https://www.instagram.com/roboclubif/')
             i.fa.fa-instagram(aria-hidden='true')
-    .fatnav.hidden-sm.hidden-md.hidden-lg *FATNAV HERE*
+  .fat-nav
+    ul
+      li.fat-nav-item(class= activeLink === 'index' ? 'active' : '')
+        a(href='/') Головна
+      li.fat-nav-item(class= activeLink === 'about' ? 'active' : '')
+        a(href='/') Про нас
+        ul
+          li
+            a(href='/team.html') Команда
+          li
+            a(href='/mission.html') Місія
+          li
+            a(href='/presentations.html') Презентації
+          li
+            a(href='/partners.html') Партнери
+          li
+            a(href='/feedback.html') Відгуки
+          li
+            a(href='/faq.html') FAQ
+      li.fat-nav-item(class= activeLink === 'courses' ? 'active' : '')
+        a(href='/courses.html') Курси
+        ul
+          li
+            a(href='/course.html') Lego Mindstorm
+      li.fat-nav-item(class= activeLink === 'news' ? 'active' : '')
+        a(href='/news.html') Новини
+      li.fat-nav-item(class= activeLink === 'gallery' ? 'active' : '')
+        a(href='/gallery.html') Галерея
+      li.fat-nav-item(class= activeLink === 'contacts' ? 'active' : '')
+        a.goto-contacts Контакти
+    ul
+      li.social-icons-wrapper
+        a.social-icon(href='https://www.facebook.com/RoboclubIF/')
+          i.fa.fa-facebook(aria-hidden='true')
+        a.social-icon(href='https://www.instagram.com/roboclubif/')
+          i.fa.fa-instagram(aria-hidden='true')

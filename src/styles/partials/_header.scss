@@ -49,10 +49,10 @@
 .header {
 	padding: 48px 0;
 	position: absolute;
+	z-index: 10000;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
 
 	.container{
 		display: flex;
@@ -133,6 +133,22 @@
 			}
 		}
 
+	}
+	.fatnav {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 5%;
+		color: white;
+		.hamburger {
+			.hamburger__icon,
+			.hamburger__icon:before,
+			.hamburger__icon:after {
+				background: white;
+			}
+		}
 	}
 }
 
@@ -283,6 +299,39 @@
 
 		&:hover{
 			color: #00cae9;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.hamburger {display: none;}
+}
+
+.fat-nav {
+	& > ul {
+		padding: 5% 10% 0;
+	}
+	ul {
+		display: block;
+		li {
+			cursor: pointer;
+			margin-left: 30px;
+			text-align: left;
+			font-size: 0.75em;
+		}
+		.fat-nav-item {
+			padding: 10px 0;
+			font-size: 1.25em;
+			&.active > a {
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+		.social-icons-wrapper {
+			.social-icon {
+				font-size: 2em;
+				margin-right: 30px;
+			}
 		}
 	}
 }

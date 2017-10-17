@@ -1,10 +1,30 @@
+-var stripeConfig = {rowIndex: 0, index: 1, resetStripesEvery: 4 };
+
 mixin preview(config)
-  div.preview(
+  -config.sizes = config.sizes || {xs: 6, sm: 4, md: 3};
+
+  if config.gallery
+    if stripeConfig.index >= stripeConfig.resetStripesEvery
+      -stripeConfig.index = (stripeConfig.rowIndex++ % 2) ? 1 : 0;
+    -config.blue = (stripeConfig.index++ % 2) ? true : false;
+
+  if config.attrs && config.attrs['data-type'] == 'photo'
+    -config.icon = 'fa fa-camera';
+
+  if config.attrs && config.attrs['data-type'] == 'video'
+    -config.icon = 'fa fa-video-camera';
+
+  -var buttonAttrs = {};
+  if config.gallery
+    -buttonAttrs.class = 'swipebox'
+    -buttonAttrs.rel = 'gallery'
+
+
+  .preview(
     class=config.sizes.xs ? 'col-xs-' + config.sizes.xs : '',
     class=config.sizes.sm ? 'col-sm-' + config.sizes.sm : '',
     class=config.sizes.md ? 'col-md-' + config.sizes.md : '',
-    class=config.sizes.lg ? 'col-lg-' + config.sizes.lg : ''
-  )&attributes(config.attrs)
+    class=config.sizes.lg ? 'col-lg-' + config.sizes.lg : '')&attributes(config.attrs)
     .preview-wrapper(class=config.blue ? 'blue' : '')
       img.preview-img(src=config.bgSRC, alt=config.title)
       .overlay
@@ -19,6 +39,6 @@ mixin preview(config)
               if config.icon === 'age'
                 span.age-icon= config.attrs['data-age'] + '+'
           .button-wrapper
-            a(href='#').basic-btn.yellow
+            a(href=config.link ? config.link : config.bgSRC)&attributes(buttonAttrs).basic-btn.yellow
               span.fa.fa-link
-              =config.buttonText
+              = (config.buttonText || 'Дивитись')
