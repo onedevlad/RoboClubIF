@@ -1,0 +1,18 @@
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="Icons with numbers" fill-rule="evenodd" fill="none">
+   <g id="Group" fill="#00B9D4">
+    <path id="Oval 210 copy" d="m4,7l0,2l3,0l0,3l2,0l0,-3l3,0l0,-2l-3,0l0,-3l-2,0l0,3l-3,0zm4,9c-4.41828,0 -8,-3.58172 -8,-8c0,-4.41828 3.58172,-8 8,-8c4.41828,0 8,3.58172 8,8c0,4.41828 -3.58172,8 -8,8zm0,0"/>
+   </g>
+   <rect stroke="#ffffff" id="svg_3" height="0.670177" width="6.653896" y="7.664912" x="4.673052" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#ffffff"/>
+   <rect transform="rotate(90 7.999999999999999,8.000000000000002) " stroke="#ffffff" id="svg_5" height="0.670177" width="6.653896" y="7.664912" x="4.673052" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#ffffff"/>
+  </g>
+ </g>
+</svg>
