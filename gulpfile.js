@@ -32,7 +32,7 @@ gulp.task('clean', function() {
 
 gulp.task('views', function() {
   return gulp.src(['src/**/*.pug', '!src/templates/*'])
-    .pipe(pug())
+    .pipe(pug({pretty: true}))
     .on('error', onError)
     .pipe( gulp.dest('build/') )
     .on('finish', browserSync.reload)
