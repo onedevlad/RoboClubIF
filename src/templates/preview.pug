@@ -26,7 +26,7 @@ mixin preview(config)
     class=config.sizes.md ? 'col-md-' + config.sizes.md : '',
     class=config.sizes.lg ? 'col-lg-' + config.sizes.lg : '')&attributes(config.attrs)
     .preview-wrapper(class=config.blue ? 'blue' : '')
-      img.preview-img(src=config.bgSRC, alt=config.title)
+      img.preview-img(src=(config.forceBgLazyLoad ? undefined : config.bgSRC), data-lazy=(config.forceBgLazyLoad ? config.bgSRC : undefined), alt=config.title)
       .overlay
         .overlay-content
           h3.title= config.title

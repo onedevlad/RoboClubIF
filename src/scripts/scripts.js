@@ -17,8 +17,6 @@ $.fn.filterData = function(key, value) {
   })
 }
 
-
-
 $(function() {
   $('.quotes-slider__photo').hide()
   $('.quotes-slider').slick({
@@ -56,19 +54,19 @@ $(function() {
 })
 
 $(document).ready(function() { // FAQ Sliding
-  var slidingSpeed = 300
+  var sliderSpeed = 300
 
   $('.faq-wrapper .item-wrapper').click(function() {
     var $this = $(this)
     var currItem = $this.attr('id').slice(-1)
     if($this.hasClass('open')) {
       $this.removeClass('open')
-      $('[id^=item-subtitle-'+currItem+']').slideUp(slidingSpeed).removeClass('open')
-      $('[id^=item-text-'+currItem+']').slideUp(slidingSpeed)
+      $('[id^=item-subtitle-'+currItem+']').slideUp(sliderSpeed).removeClass('open')
+      $('[id^=item-text-'+currItem+']').slideUp(sliderSpeed)
     }
     else {
       $this.addClass('open')
-      $('[id^=item-subtitle-'+currItem+']').slideDown(slidingSpeed)
+      $('[id^=item-subtitle-'+currItem+']').slideDown(sliderSpeed)
     }
   })
 
@@ -78,11 +76,11 @@ $(document).ready(function() { // FAQ Sliding
     var currItem = $this.attr('id').slice(-3)
     if($this.hasClass('open')) {
       $this.removeClass('open')
-      $('#item-text-'+currItem).slideUp(slidingSpeed)
+      $('#item-text-'+currItem).slideUp(sliderSpeed)
     }
     else {
       $this.addClass('open')
-      $('#item-text-'+currItem).slideDown(slidingSpeed)
+      $('#item-text-'+currItem).slideDown(sliderSpeed)
     }
   })
 
@@ -92,11 +90,11 @@ $(document).ready(function() { // FAQ Sliding
     var currItem = $this.attr('id').slice(-3)
     if($this.parent().find('.subtitle-wrapper').hasClass('open')) {
       $this.parent().find('.subtitle-wrapper').removeClass('open')
-      $('#item-text-'+currItem).slideUp(slidingSpeed)
+      $('#item-text-'+currItem).slideUp(sliderSpeed)
     }
     else {
       $this.parent().find('.subtitle-wrapper').addClass('open')
-      $('#item-text-'+currItem).slideDown(slidingSpeed)
+      $('#item-text-'+currItem).slideDown(sliderSpeed)
     }
   })
 })
@@ -111,6 +109,7 @@ $(document).ready(function() {
   })
   $('.swipebox').swipebox({ loopAtEnd: true })
   $('.slick-news-slider').slick({
+    lazyLoad: 'progressive',
     draggable: false,
     prevArrow: '.slick-news-slider-prev',
     nextArrow: '.slick-news-slider-next',

@@ -4,6 +4,7 @@ include ./templates/contacts
 include ./templates/footer
 include ./templates/faq
 include ./templates/course
+include ./templates/preview
 
 doctype html
 html(lang='uk')
@@ -191,9 +192,35 @@ html(lang='uk')
         .container-fluid.see-also-header-wrapper
           h2.see-also-header Дивіться також
         .container.courses-preview-wrapper
-          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'blue')
-          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
-          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'blue')
-          +coursePreview('constr', 'Lorem Ipsum is simply dummy text', '18', 'free', './images/news_1.jpg', 'orange')
+          +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'progr', 'data-age': 5, 'data-pay': 'free' },
+              icon: 'age',
+              link: '#',
+              bgSRC: './images/news_3.jpg'
+            })
+          +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'progr', 'data-age': 18, 'data-pay': 'free' },
+              icon: 'age',
+              link: '#',
+              blue: true,
+              bgSRC: './images/news_1.jpg'
+            })
+          +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'progr', 'data-age': 9, 'data-pay': 'free' },
+              icon: 'age',
+              link: '#',
+              bgSRC: './images/news_2.jpg'
+            })
+          +preview({
+              title: 'Lorem ipsum is simply dummy text',
+              attrs: { 'data-cat': 'progr', 'data-age': 12, 'data-pay': 'free' },
+              icon: 'age',
+              link: '#',
+              blue: true,
+              bgSRC: './images/news_4.jpg'
+            })
         +contacts()
       +footer()
